@@ -1,20 +1,25 @@
 pipeline{
     agent any
         stages{
-          stage("Build"){
-                  steps{
-                    echo "Build my jenkins pipeline..."
-                        }
-                    }
-          stage("test"){
-                  steps{
-                    echo "Testing my jenkins pipeline..."
-                        }
-                    }
-          stage("deploy"){
-                  steps{
-                    echo "deploy my jenkins pipeline..."
-                        }
-                    }
+            stage("Hello"){
+                steps{
+                    echo "Hello, this is my first pipeline"
+                }
             }
-      }
+            stage("clone"){
+                steps{
+                    echo "Clone repository"
+                }
+            }
+            stage("Run build"){
+                steps{
+                    echo "running code for errors"
+                }
+            }
+            stage("Testing"){
+                steps{
+                    echo "testing code"
+                }
+            }
+        }
+}
